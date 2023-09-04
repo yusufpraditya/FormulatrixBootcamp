@@ -5,10 +5,19 @@ class Program
 	{
 		Console.WriteLine("Keseharian kucing");
 		
-		Cat kucing1 = new Cat();
-		kucing1.Eat();
-		kucing1.Meow();
-		kucing1.Walk();
-		kucing1.Sleep();
+		Cat kucing = new Cat();
+		kucing.Eat();
+		kucing.Meow();
+		kucing.Walk();
+		kucing.Sleep();
+		
+		Console.WriteLine("");
+		Console.WriteLine("Keseharian anjing");
+		
+		Dog anjing = new Dog();
+		anjing.Eat();
+		anjing.Bark();
+		anjing.Walk();
+		anjing.Sleep();
 	}
 }
