@@ -29,7 +29,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeCasting", "W1 D3\TypeCa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodHiding", "W1 D3\MethodHiding\MethodHiding.csproj", "{45977EB2-1F92-4A88-85CE-EED6715911C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceSeggregation", "W1 D3\InterfaceSeggregation\InterfaceSeggregation.csproj", "{BD82992B-A5BB-46B3-8F43-86151B8D1101}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceSegregation", "W1 D3\InterfaceSegregation\InterfaceSegregation.csproj", "{BD82992B-A5BB-46B3-8F43-86151B8D1101}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
