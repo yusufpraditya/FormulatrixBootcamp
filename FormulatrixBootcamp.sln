@@ -25,11 +25,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day3", "Day3", "{7892F519-C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Override", "W1 D3\Polymorphism\Override\Override.csproj", "{D78A1557-DB30-434F-9D40-35160A4DAF90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeCasting", "TypeCasting\TypeCasting.csproj", "{5275FE71-3F2C-449D-8A07-CE4D9D6FECAD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeCasting", "W1 D3\TypeCasting\TypeCasting.csproj", "{5275FE71-3F2C-449D-8A07-CE4D9D6FECAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodHiding", "MethodHiding\MethodHiding.csproj", "{45977EB2-1F92-4A88-85CE-EED6715911C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodHiding", "W1 D3\MethodHiding\MethodHiding.csproj", "{45977EB2-1F92-4A88-85CE-EED6715911C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceSeggregation", "InterfaceSeggregation\InterfaceSeggregation.csproj", "{BD82992B-A5BB-46B3-8F43-86151B8D1101}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceSeggregation", "W1 D3\InterfaceSeggregation\InterfaceSeggregation.csproj", "{BD82992B-A5BB-46B3-8F43-86151B8D1101}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
