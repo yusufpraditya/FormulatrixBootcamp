@@ -19,7 +19,6 @@ public class Battlefield
 	{
 		Console.WriteLine("Game is loading..");
 		Console.WriteLine($"Load skin in {weaponSkin}");
-		Console.WriteLine($"Game progress is {storyProgress * 100}%");
 	}
 	public void PlayGame() 
 	{
