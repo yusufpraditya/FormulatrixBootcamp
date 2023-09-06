@@ -13,6 +13,8 @@ public class Program
 		offlineGame.PlayGame();
 		offlineGame.StopGame();
 		
+		Console.WriteLine();
+		
 		// Play online game
 		OnlinePlayer onlinePlayer = new();
 		float kda = onlinePlayer.GetKDA();
