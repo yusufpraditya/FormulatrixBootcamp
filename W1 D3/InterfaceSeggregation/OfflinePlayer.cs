@@ -2,15 +2,15 @@ namespace Game;
 
 public class OfflinePlayer : IPlayer
 {
-	private string rareSkin = "C:/Battlefield9/Assets/RareSkin.png";
-	private float storyProgress = 0.5f;
+	private string _rareSkin = "C:/Battlefield9/Assets/RareSkin.png";
+	private float _storyProgress = 0.5f;
 	public float GetStoryProgress() 
 	{
-		return storyProgress;
+		return _storyProgress;
 	}
 	
 	public string GetWeaponSkin() 
 	{
-		return rareSkin;
+		return _rareSkin;
 	}
 }
