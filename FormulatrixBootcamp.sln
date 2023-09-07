@@ -33,13 +33,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceSegregation", "W1 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day4", "Day4", "{A718291C-B218-4283-837F-43CF360568AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractClass", "AbstractClass\AbstractClass.csproj", "{AAF2C0DE-3EB1-4E94-B483-E34878CC2720}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractClass", "W1 D4\AbstractClass\AbstractClass.csproj", "{AAF2C0DE-3EB1-4E94-B483-E34878CC2720}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Static", "Static\Static.csproj", "{EB36E094-5E54-4F05-8EF2-2EDD48DE2628}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Static", "W1 D4\Static\Static.csproj", "{EB36E094-5E54-4F05-8EF2-2EDD48DE2628}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeManipulation", "TypeManipulation\TypeManipulation.csproj", "{466DCC52-00BD-45AD-A9AD-DAF1B2A8638E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeManipulation", "W1 D4\TypeManipulation\TypeManipulation.csproj", "{466DCC52-00BD-45AD-A9AD-DAF1B2A8638E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringBuilder", "StringBuilder\StringBuilder.csproj", "{91ED9A40-142E-4F61-B823-3593C4EF260D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringBuilder", "W1 D4\StringBuilder\StringBuilder.csproj", "{91ED9A40-142E-4F61-B823-3593C4EF260D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
