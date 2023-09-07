@@ -35,7 +35,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day4", "Day4", "{A718291C-B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractClass", "W1 D4\AbstractClass\AbstractClass.csproj", "{AAF2C0DE-3EB1-4E94-B483-E34878CC2720}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Static", "W1 D4\Static\Static.csproj", "{EB36E094-5E54-4F05-8EF2-2EDD48DE2628}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Static", "W1 D3\Static\Static.csproj", "{EB36E094-5E54-4F05-8EF2-2EDD48DE2628}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeManipulation", "W1 D4\TypeManipulation\TypeManipulation.csproj", "{466DCC52-00BD-45AD-A9AD-DAF1B2A8638E}"
 EndProject
