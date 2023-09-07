@@ -8,5 +8,11 @@ public class Program
 		
 		animal.Move();
 		cat.Move();
+		
+		Animal animal2 = new();
+		Cat cat2 = new();
+		
+		animal2.Move();
+		cat2.Move();
 	}
 }

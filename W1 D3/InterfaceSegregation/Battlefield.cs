@@ -5,12 +5,16 @@ public class Battlefield
 	public float kda, winRate, storyProgress;
 	public string weaponSkin;
 	public bool isOnline;
+	
+	// Overloading method
 	public Battlefield(float storyProgress, string weaponSkin) 
 	{
 		this.storyProgress = storyProgress;
 		this.weaponSkin = weaponSkin;
 		isOnline = false;
 	}
+	
+	// Overloading method
 	public Battlefield(float kda, float winRate, string weaponSkin) 
 	{
 		this.kda = kda;

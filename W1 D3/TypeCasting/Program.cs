@@ -3,22 +3,22 @@
 	static void Main() 
 	{
 		// Implicit casting or up casting, small type size -> big type size
-		int num1 = 100; // 32 bit
-		float num2 = num1; // 64 bit
+		int num1 = 100; // 32 bit / 4 bytes
+		double num2 = num1; // 64 bit / 8 bytes
+		Console.WriteLine("Implicit casting (up casting)");
+		Console.WriteLine($"Size of int: {sizeof(int)} bytes");
+		Console.WriteLine($"Size of double: {sizeof(double)} bytes");
 		Console.WriteLine(num2);
 		
 		// Explicit casting or down casting, big type size -> small type size
-		float num3 = 100.1f;
+		Console.WriteLine("Explicit casting (down casting)");
+		double num3 = 100.1;
 		int num4 = (int) num3;
-		Console.WriteLine(num4);
-		
-		double num5 = 100.1;
+		Console.WriteLine(num4);		
+	
+		decimal num5 = 100.1M;
 		int num6 = (int) num5;
 		Console.WriteLine(num6);
-		
-		decimal num7 = 100.1M;
-		int num8 = (int) num7;
-		Console.WriteLine(num8);
 		
 		// Down casting on Instance
 		ParentClass parent = new();
