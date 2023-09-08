@@ -1,4 +1,5 @@
-﻿public class Program 
+﻿using TypeManipulation;
+public class Program 
 {
 	static void Main() 
 	{
@@ -25,14 +26,5 @@
 		text2 = "World";
 		Console.WriteLine(text1);
 		Console.WriteLine(text2);
-	}
-}
-
-public class Number 
-{
-	public int number;
-	public Number(int x) 
-	{
-		number = x;
 	}
 }
