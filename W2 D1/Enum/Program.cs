@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using Difficulty;
+﻿using Difficulty;
 
 public class Program 
 {
