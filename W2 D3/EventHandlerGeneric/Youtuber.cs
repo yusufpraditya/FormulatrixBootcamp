@@ -1,21 +1,14 @@
 ﻿namespace EventHandlerGeneric;
 public class Youtuber
 {
-	private EventHandler<EventData>? _sub;
-	private EventHandler<EventData>? _viewCount;
+	public EventHandler<EventData>? _sub;
+	public EventHandler<EventData>? trendingHandler;
 	private string? _name;
 	
 	public Youtuber(string name) 
 	{
 		_name = name;
 	}
-	
-	public void GetViewCount() 
-	{
-		
-	}
-	
-	
 	
 	public void UploadVideo(string title) 
 	{
@@ -53,14 +46,6 @@ public class Youtuber
 		else 
 		{
 			Console.WriteLine("Error: No subscriber.");
-		}
-	}
-	
-	public void AddViewCount(EventHandler<EventData>? viewCount) 
-	{
-		if (_viewCount == null || !_viewCount.GetInvocationList().Contains(viewCount)) 
-		{
-			_viewCount += viewCount;
 		}
 	}
 	public override string? ToString()

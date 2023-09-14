@@ -10,7 +10,9 @@ public class Program
 		yt.AddSubscriber(sub1.GetNotification);
 		yt.UploadVideo("Game Horror");
 		
-		yt.AddViewCount(sub1.WatchVideo);
+		yt.trendingHandler += sub1.ViewReached;
+		sub1.WatchVideo(yt.trendingHandler, 1000000);
+		
 		
 	}
 }
