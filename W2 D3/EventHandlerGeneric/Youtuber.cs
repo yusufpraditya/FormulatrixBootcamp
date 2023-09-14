@@ -1,8 +1,11 @@
 ﻿namespace EventHandlerGeneric;
 public class Youtuber
 {
-	public EventHandler<EventData>? _sub;
+	private int _videoIndex;
+	private EventData? _data = new();
+	public EventHandler<EventData>? notificationHandler;
 	public EventHandler<EventData>? trendingHandler;
+	public EventHandler<EventData>? videoHandler;
 	private string? _name;
 	
 	public Youtuber(string name) 
@@ -12,6 +15,8 @@ public class Youtuber
 	
 	public void UploadVideo(string title) 
 	{
+		_videoIndex += 1;
+		EventData.videoDict?.Add(_videoIndex, title);
 		Console.WriteLine($"Video with title {title} is being uploaded..");
 		Console.WriteLine("Video uploaded.");
 		SendNotification(title);
@@ -19,33 +24,9 @@ public class Youtuber
 	
 	private void SendNotification(string title) 
 	{
-		if (_sub != null) 
+		if (notificationHandler != null) 
 		{
-			_sub.Invoke(this, new EventData {message = $"Youtube Notification: {this} - {title}"});
-		}
-	}
-	
-	public void AddSubscriber(EventHandler<EventData>? sub) 
-	{
-		if (_sub == null || !_sub.GetInvocationList().Contains(sub)) 
-		{
-			_sub += sub;
-		}
-		else 
-		{
-			Console.WriteLine("Error: Subscriber already exist.");
-		}
-	}
-	
-	public void RemoveSubscriber(EventHandler<EventData>? sub) 
-	{
-		if (_sub != null) 
-		{
-			_sub -= sub;
-		}
-		else 
-		{
-			Console.WriteLine("Error: No subscriber.");
+			notificationHandler.Invoke(this, new EventData {message = $"Youtube Notification: {this} - {title}"});
 		}
 	}
 	public override string? ToString()

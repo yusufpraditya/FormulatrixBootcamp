@@ -7,11 +7,18 @@ public class Program
 		Youtuber yt = new Youtuber("Windah Basudara");
 		Subscriber sub1 = new Subscriber("Yusuf");
 		
-		yt.AddSubscriber(sub1.GetNotification);
-		yt.UploadVideo("Game Horror");
-		
+		yt.notificationHandler += sub1.GetNotification;
 		yt.trendingHandler += sub1.ViewReached;
-		sub1.WatchVideo(yt.trendingHandler, 1000000);
+		
+		yt.UploadVideo("Game Horror");
+		yt.UploadVideo("Game Bocil");
+		yt.UploadVideo("Game Sus");
+		
+		// todo: fix trending video bug
+		sub1.GetVideoList();
+		sub1.WatchVideo(yt.trendingHandler, 1, 500000);
+		sub1.WatchVideo(yt.trendingHandler, 2, 500000);
+		sub1.WatchVideo(yt.trendingHandler, 1, 500000);
 		
 		
 	}

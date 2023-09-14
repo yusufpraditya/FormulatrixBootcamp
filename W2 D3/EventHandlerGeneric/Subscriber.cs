@@ -3,16 +3,17 @@ public class Subscriber
 {
 	private string? _name;
 	private int _trendingThreshold = 1000000;
-	EventData data = new();
+	public EventHandler<EventData>? videoDictHandler;
+	public EventData data = new();
 	
 	public Subscriber(string name) 
 	{
 		_name = name;
 	}
 	
-	public void WatchVideo(EventHandler<EventData> trendingHandler, int times) 
+	public void WatchVideo(EventHandler<EventData> trendingHandler, int videoIndex, int times) 
 	{
-		Console.WriteLine($"{_name} is watching youtube video {times} times.");
+		Console.WriteLine($"{_name} is watching {EventData.videoDict?.GetValueOrDefault(videoIndex)} {times} times.");
 		data.viewCount += times;
 		if (data.viewCount >= _trendingThreshold) 
 		{
@@ -28,8 +29,18 @@ public class Subscriber
 		Console.WriteLine(e.message);
 	}
 	
+	public void GetVideoList() 
+	{
+		Console.WriteLine("Video List");
+		if (EventData.videoDict != null) {
+			foreach (var kvp in EventData.videoDict) {
+				Console.WriteLine($"{kvp.Key}. {kvp.Value}");
+			}
+		}
+	}
+	
 	public void ViewReached(object? sender, EventData e) 
 	{
-		Console.WriteLine($"Video has reached {e.viewCount} and is now #1 Trending");
+		Console.WriteLine($"Video has reached {e.viewCount} views and is now #1 Trending.");
 	}
 }
