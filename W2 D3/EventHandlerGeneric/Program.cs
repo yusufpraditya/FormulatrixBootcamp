@@ -29,7 +29,7 @@ public class Program
 		sub1.GetTrendingVideo();
 		
 		sub2.GetVideoList();
-		sub2.WatchVideo(4, 100000);
+		sub2.WatchVideo(4, 110000);
 		sub2.GetTrendingVideo();
 	}
 }
