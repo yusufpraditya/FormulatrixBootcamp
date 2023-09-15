@@ -4,22 +4,32 @@ public class Program
 {
 	static void Main() 
 	{
-		Youtuber yt = new Youtuber("Windah Basudara");
-		Subscriber sub1 = new Subscriber("Yusuf");
+		Server serverID = new Server();
+		Youtuber yt1 = new Youtuber("Windah Basudara");
+		Youtuber yt2 = new Youtuber("IShowSpeed");
+		Subscriber sub1 = new Subscriber("Yanto", serverID);
+		Subscriber sub2 = new Subscriber("Burhan", serverID);
 		
-		yt.notificationHandler += sub1.GetNotification;
-		yt.trendingHandler += sub1.ViewReached;
+		yt1.notificationHandler += sub1.GetNotification;
+		sub1.trendingHandler += serverID.ViewReached;
 		
-		yt.UploadVideo("Game Horror");
-		yt.UploadVideo("Game Bocil");
-		yt.UploadVideo("Game Sus");
+		yt2.notificationHandler += sub1.GetNotification;
+		sub2.trendingHandler += serverID.ViewReached;
 		
-		// todo: fix trending video bug
+		yt1.UploadVideo("Game Horror");
+		yt1.UploadVideo("Game Bocil");
+		yt1.UploadVideo("Game Sus");
+		yt2.UploadVideo("Game Bola");
+		
 		sub1.GetVideoList();
-		sub1.WatchVideo(yt.trendingHandler, 1, 500000);
-		sub1.WatchVideo(yt.trendingHandler, 2, 500000);
-		sub1.WatchVideo(yt.trendingHandler, 1, 500000);
+		sub1.WatchVideo(1, 1500000);
+		sub1.WatchVideo(2, 1200000);
+		sub1.WatchVideo(4, 1100000);
+		sub1.WatchVideo(3, 1000000);
+		sub1.GetTrendingVideo();
 		
-		
+		sub2.GetVideoList();
+		sub2.WatchVideo(4, 100000);
+		sub2.GetTrendingVideo();
 	}
 }

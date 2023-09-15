@@ -1,12 +1,13 @@
 ﻿namespace EventHandlerGeneric;
 public class Youtuber
 {
-	private int _videoIndex;
-	private EventData? _data = new();
-	public EventHandler<EventData>? notificationHandler;
-	public EventHandler<EventData>? trendingHandler;
-	public EventHandler<EventData>? videoHandler;
+	public static int videoIndex;
 	private string? _name;
+	public static Dictionary<int, string> videoDict = new();
+	public static Dictionary<int, int> trendingDict = new();
+	public EventHandler<DataEventArgs>? notificationHandler;
+	//public EventHandler<DataEventArgs>? trendingHandler;
+	public EventHandler<DataEventArgs>? videoHandler;
 	
 	public Youtuber(string name) 
 	{
@@ -15,10 +16,11 @@ public class Youtuber
 	
 	public void UploadVideo(string title) 
 	{
-		_videoIndex += 1;
-		EventData.videoDict?.Add(_videoIndex, title);
-		Console.WriteLine($"Video with title {title} is being uploaded..");
-		Console.WriteLine("Video uploaded.");
+		title += $" ({_name})";
+		videoIndex += 1;
+		videoDict.Add(videoIndex, title);
+		Console.WriteLine($"[Youtuber] Video with title {title} is being uploaded..");
+		Console.WriteLine("[Youtuber] Video uploaded.");
 		SendNotification(title);
 	}
 	
@@ -26,7 +28,7 @@ public class Youtuber
 	{
 		if (notificationHandler != null) 
 		{
-			notificationHandler.Invoke(this, new EventData {message = $"Youtube Notification: {this} - {title}"});
+			notificationHandler.Invoke(this, new DataEventArgs {message = $"[Subscriber] Youtube Notification: {title}"});
 		}
 	}
 	public override string? ToString()
