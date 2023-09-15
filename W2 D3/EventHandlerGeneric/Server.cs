@@ -30,6 +30,6 @@ public class Server
 				trendingNumber = number;
 			}
 		}
-		Console.WriteLine($"[Subscriber] Video {Youtuber.videoDict.GetValueOrDefault(e.videoIndex)} has reached {e.viewCount.GetValueOrDefault(e.videoIndex)} views and is now #{trendingNumber} Trending.");
+		Console.WriteLine($"[Server] Video {Youtuber.videoDict.GetValueOrDefault(e.videoIndex)} has reached {e.viewCount.GetValueOrDefault(e.videoIndex)} views and is now #{trendingNumber} Trending.");
 	}
 }
