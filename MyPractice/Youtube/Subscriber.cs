@@ -14,19 +14,27 @@ public class Subscriber : IWatch
 	
 	public void WatchVideo(int videoIndex, int times) 
 	{
-		_server.data.videoIndex = videoIndex;
-		Console.WriteLine($"[Subscriber] {_name} is watching {Youtuber.videoDict.GetValueOrDefault(videoIndex)} {times} times.");
-		if (_server.data.viewCount.ContainsKey(videoIndex)) 
+		bool success = Youtuber.videoDict.TryGetValue(videoIndex, out string? title);
+		if (success) 
 		{
-			_server.data.viewCount[videoIndex] += times;
+			_server.data.videoIndex = videoIndex;
+			Console.WriteLine($"[Subscriber] {_name} is watching {title} {times} times.");
+			if (_server.data.viewCount.ContainsKey(videoIndex)) 
+			{
+				_server.data.viewCount[videoIndex] += times;
+			}
+			else 
+			{
+				_server.data.viewCount.Add(videoIndex, times);
+			}
+			if (_server.data.viewCount.GetValueOrDefault(videoIndex) >= _trendingThreshold && trendingHandler != null) 
+			{
+				trendingHandler.Invoke(this, _server.data);	
+			}
 		}
 		else 
 		{
-			_server.data.viewCount.Add(videoIndex, times);
-		}
-		if (_server.data.viewCount.GetValueOrDefault(videoIndex) >= _trendingThreshold && trendingHandler != null) 
-		{
-			trendingHandler.Invoke(this, _server.data);	
+			Console.WriteLine("The video is unavailable!");
 		}
 	}
 	

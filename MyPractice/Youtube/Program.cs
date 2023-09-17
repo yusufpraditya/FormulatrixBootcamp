@@ -12,9 +12,11 @@ public class Program
 		
 		server.notificationHandler += sub1.GetNotification;
 		sub1.trendingHandler += server.ViewReached;
+		yt1.trendingHandler += server.ViewReached;
 		
 		server.notificationHandler += sub2.GetNotification;
 		sub2.trendingHandler += server.ViewReached;
+		yt2.trendingHandler += server.ViewReached;
 		
 		yt1.UploadVideo("Game Horror");
 		yt1.UploadVideo("Game Bocil");
@@ -28,8 +30,13 @@ public class Program
 		sub1.WatchVideo(3, 1000000);
 		sub1.GetTrendingVideo();
 		
-		sub2.GetVideoList();
 		sub2.WatchVideo(4, 110000);
 		sub2.GetTrendingVideo();
+		
+		yt1.WatchVideo(2, 100000000);
+		yt1.GetTrendingVideo();
+		
+		yt2.WatchVideo(2, 100000000);
+		yt2.GetTrendingVideo();
 	}
 }

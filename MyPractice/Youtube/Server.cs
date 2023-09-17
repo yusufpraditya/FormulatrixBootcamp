@@ -5,6 +5,8 @@ public class Server
 	private int _trendingThreshold = 1000000;
 	public DataEventArgs data = new();
 	public EventHandler<DataEventArgs>? notificationHandler;
+	
+	public int TrendingThreshold { get => _trendingThreshold; }
 
 	public List<Trending> GetTrendingList() 
 	{
