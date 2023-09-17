@@ -1,4 +1,4 @@
-﻿namespace EventHandlerGeneric;
+﻿namespace Youtube;
 public class Youtuber : IUpload, IWatch
 {
 	public static int videoIndex;
