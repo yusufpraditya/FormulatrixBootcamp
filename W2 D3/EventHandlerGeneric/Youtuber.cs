@@ -1,34 +1,47 @@
 ﻿namespace EventHandlerGeneric;
-public class Youtuber
+public class Youtuber : IUpload, IWatch
 {
 	public static int videoIndex;
 	private string? _name;
+	private Server _server = new();
 	public static Dictionary<int, string> videoDict = new();
 	public static Dictionary<int, int> trendingDict = new();
-	public EventHandler<DataEventArgs>? notificationHandler;
-	//public EventHandler<DataEventArgs>? trendingHandler;
-	public EventHandler<DataEventArgs>? videoHandler;
+	public EventHandler<DataEventArgs>? uploadHandler;
 	
-	public Youtuber(string name) 
+	public Youtuber(string name, Server server) 
 	{
 		_name = name;
+		_server = server;
+		uploadHandler += _server.UploadFinished;
 	}
 	
-	public void UploadVideo(string title) 
+	public void UploadVideo(string videoTitle) 
 	{
-		title += $" ({_name})";
+		Console.WriteLine($"[Youtuber] {_name} tried to upload new video with title {videoTitle}.");
+		videoTitle += $" ({_name})";
 		videoIndex += 1;
-		videoDict.Add(videoIndex, title);
-		Console.WriteLine($"[Youtuber] Video with title {title} is being uploaded..");
-		Console.WriteLine("[Youtuber] Video uploaded.");
-		SendNotification(title);
+		videoDict.Add(videoIndex, videoTitle);
+		UploadToServer(videoIndex, videoTitle);
 	}
 	
-	private void SendNotification(string title) 
+	private void UploadToServer(int videoIndex, string videoTitle) 
 	{
-		if (notificationHandler != null) 
+		_server.data.videoIndex = videoIndex;
+		_server.data.videoTitle = videoTitle;
+		if (uploadHandler != null) uploadHandler.Invoke(this, _server.data);
+	}
+	
+	public void WatchVideo(int videoIndex, int times) 
+	{
+		_server.data.videoIndex = videoIndex;
+		Console.WriteLine($"[Youtuber] {_name} is watching {videoDict.GetValueOrDefault(videoIndex)} {times} times.");
+		if (_server.data.viewCount.ContainsKey(videoIndex)) 
 		{
-			notificationHandler.Invoke(this, new DataEventArgs {message = $"[Subscriber] Youtube Notification: {title}"});
+			_server.data.viewCount[videoIndex] += times;
+		} 
+		else 
+		{
+			_server.data.viewCount.Add(videoIndex, times);
 		}
 	}
 	public override string? ToString()

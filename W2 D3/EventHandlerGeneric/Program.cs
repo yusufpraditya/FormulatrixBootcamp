@@ -4,17 +4,17 @@ public class Program
 {
 	static void Main() 
 	{
-		Server serverID = new Server();
-		Youtuber yt1 = new Youtuber("Windah Basudara");
-		Youtuber yt2 = new Youtuber("IShowSpeed");
-		Subscriber sub1 = new Subscriber("Yanto", serverID);
-		Subscriber sub2 = new Subscriber("Burhan", serverID);
+		Server server = new Server();
+		Youtuber yt1 = new Youtuber("Windah Basudara", server);
+		Youtuber yt2 = new Youtuber("IShowSpeed", server);
+		Subscriber sub1 = new Subscriber("Yanto", server);
+		Subscriber sub2 = new Subscriber("Burhan", server);
 		
-		yt1.notificationHandler += sub1.GetNotification;
-		sub1.trendingHandler += serverID.ViewReached;
+		server.notificationHandler += sub1.GetNotification;
+		sub1.trendingHandler += server.ViewReached;
 		
-		yt2.notificationHandler += sub1.GetNotification;
-		sub2.trendingHandler += serverID.ViewReached;
+		server.notificationHandler += sub2.GetNotification;
+		sub2.trendingHandler += server.ViewReached;
 		
 		yt1.UploadVideo("Game Horror");
 		yt1.UploadVideo("Game Bocil");

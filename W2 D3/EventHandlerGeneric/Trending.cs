@@ -5,7 +5,7 @@ public class Trending : IComparable<Trending>
 	public int VideoIndex { get; set; }
 	public int ViewCount { get; set; }
 	
-	public int CompareTo(Trending compareTrending)
+	public int CompareTo(Trending? compareTrending)
 	{
 		if (compareTrending == null)
 			return 1;

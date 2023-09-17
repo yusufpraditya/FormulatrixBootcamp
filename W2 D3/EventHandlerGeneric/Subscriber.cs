@@ -1,11 +1,8 @@
-﻿using System.Data;
-
-namespace EventHandlerGeneric;
-public class Subscriber
+﻿namespace EventHandlerGeneric;
+public class Subscriber : IWatch
 {
 	private string? _name;
 	private int _trendingThreshold = 1000000;
-	//public EventHandler<DataEventArgs>? videoDictHandler;
 	private Server _server = new();
 	public EventHandler<DataEventArgs>? trendingHandler;
 
@@ -22,7 +19,7 @@ public class Subscriber
 		if (_server.data.viewCount.ContainsKey(videoIndex)) 
 		{
 			_server.data.viewCount[videoIndex] += times;
-		} 
+		}
 		else 
 		{
 			_server.data.viewCount.Add(videoIndex, times);
@@ -35,7 +32,7 @@ public class Subscriber
 	
 	public void GetNotification(object? sender, DataEventArgs e) 
 	{
-		Console.WriteLine(e.message);
+		Console.WriteLine($"[Subscriber] {_name} received notification: {e.videoTitle}");
 	}
 	
 	public void GetVideoList() 

@@ -4,14 +4,6 @@ public class Program
 {
 	static void Main() 
 	{
-		try 
-		{
-			Console.WindowWidth = Console.LargestWindowWidth;
-		}
-		catch (PlatformNotSupportedException ex) 
-		{
-			Console.WriteLine(ex.Message);
-		}
 		Console.ForegroundColor = ConsoleColor.Green;
 		Console.Write("test... 50%");
 		Console.CursorLeft -= 3;

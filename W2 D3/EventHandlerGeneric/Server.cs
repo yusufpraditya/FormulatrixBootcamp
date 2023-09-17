@@ -2,8 +2,9 @@
 
 public class Server
 {
-	private static int _trendingThreshold = 1000000;
+	private int _trendingThreshold = 1000000;
 	public DataEventArgs data = new();
+	public EventHandler<DataEventArgs>? notificationHandler;
 
 	public List<Trending> GetTrendingList() 
 	{
@@ -15,6 +16,18 @@ public class Server
 		trendingList.Sort();
 		trendingList.Reverse();
 		return trendingList;
+	}
+	
+	public void UploadFinished(object? sender, DataEventArgs e) 
+	{
+		Console.WriteLine($"[Server] Video with title {e.videoTitle} is being uploaded.");
+		Console.WriteLine("[Server] Upload finished.");
+		SendNotification();
+	}
+	
+	private void SendNotification() 
+	{
+		if (notificationHandler != null) notificationHandler.Invoke(this, data);
 	}
 	
 	public void ViewReached(object? sender, DataEventArgs e) 
