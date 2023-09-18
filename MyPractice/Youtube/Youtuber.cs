@@ -29,7 +29,7 @@ public class Youtuber : IUpload, IWatch
 	{
 		_server.data.videoIndex = videoIndex;
 		_server.data.videoTitle = videoTitle;
-		if (uploadHandler != null) uploadHandler.Invoke(this, _server.data);
+		uploadHandler?.Invoke(this, _server.data);
 	}
 	
 	public void WatchVideo(int videoIndex, int times) 
@@ -49,9 +49,9 @@ public class Youtuber : IUpload, IWatch
 				{
 					_server.data.viewCount.Add(videoIndex, times);
 				}
-				if (_server.data.viewCount.GetValueOrDefault(videoIndex) >= _server.TrendingThreshold && trendingHandler != null) 
+				if (_server.data.viewCount.GetValueOrDefault(videoIndex) >= _server.TrendingThreshold) 
 				{
-					trendingHandler.Invoke(this, _server.data);	
+					trendingHandler?.Invoke(this, _server.data);	
 				}
 			}
 		}

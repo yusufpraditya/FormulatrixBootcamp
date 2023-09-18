@@ -29,7 +29,7 @@ public class Server
 	
 	private void SendNotification() 
 	{
-		if (notificationHandler != null) notificationHandler.Invoke(this, data);
+		notificationHandler?.Invoke(this, data);
 	}
 	
 	public void ViewReached(object? sender, DataEventArgs e) 

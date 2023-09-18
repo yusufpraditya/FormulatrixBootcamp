@@ -27,9 +27,9 @@ public class Subscriber : IWatch
 			{
 				_server.data.viewCount.Add(videoIndex, times);
 			}
-			if (_server.data.viewCount.GetValueOrDefault(videoIndex) >= _trendingThreshold && trendingHandler != null) 
+			if (_server.data.viewCount.GetValueOrDefault(videoIndex) >= _trendingThreshold) 
 			{
-				trendingHandler.Invoke(this, _server.data);	
+				trendingHandler?.Invoke(this, _server.data);	
 			}
 		}
 		else 
