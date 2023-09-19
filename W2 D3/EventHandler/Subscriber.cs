@@ -10,7 +10,6 @@ public class Subscriber
 	
 	public void GetNotification(object? sender, EventArgs e) 
 	{
-		
 		Console.WriteLine($"{_name} is getting notification from Youtuber ({sender}).");
 	}
 }
