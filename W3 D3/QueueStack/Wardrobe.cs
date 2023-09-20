@@ -76,10 +76,9 @@ public class Wardrobe
 		sb.AppendLine();
 		foreach (var shelf in _stackOfClothes) 
 		{
-			IEnumerable<Enum> enumerableStack = shelf;
 			sb.Append($"Shelf number: {Array.IndexOf(_stackOfClothes, shelf)} | Number of clothes: {shelf.Count}");
 			sb.AppendLine();
-			foreach (var item in enumerableStack)
+			foreach (var item in shelf)
 			{
 				sb.Append($"{item}");
 				sb.AppendLine();
