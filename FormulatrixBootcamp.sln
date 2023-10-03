@@ -131,7 +131,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueStack", "W3 D3\QueueSt
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "W5 D1", "W5 D1", "{2A99B32E-4EA2-467B-A477-CB0844233CDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarbageCollection", "GarbageCollection\GarbageCollection.csproj", "{2739F473-20E7-4786-AC1F-2479A2E18A83}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarbageCollection", "W5 D1\GarbageCollection\GarbageCollection.csproj", "{2739F473-20E7-4786-AC1F-2479A2E18A83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
