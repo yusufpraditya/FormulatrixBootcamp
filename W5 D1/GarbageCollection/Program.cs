@@ -13,13 +13,15 @@ public class Program
 		Console.WriteLine("The highest generation is {0}", GC.MaxGeneration);
 		Console.WriteLine("Generation: {0}", GC.GetGeneration(garbage));
 		garbage.CreateGarbage(1000);
-		
+		//Console.Read();
+
 		GC.Collect(0);
 		Console.WriteLine("Generation: {0}", GC.GetGeneration(garbage));
-		
+		//Console.Read();
+
 		GC.Collect(1);
 		Console.WriteLine("Generation: {0}", GC.GetGeneration(garbage));
-		
+		//Console.Read();
 		
 	}
 }
