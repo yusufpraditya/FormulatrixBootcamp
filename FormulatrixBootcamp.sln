@@ -145,6 +145,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "W5 D4", "W5 D4", "{5637E846
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CancellationToken", "W5 D4\CancellationToken\CancellationToken.csproj", "{09D51696-9994-41B5-9959-9DFD1B331B02}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "W5 D5", "W5 D5", "{A966AD2E-80DB-49E0-8070-B6DFE0C1E36D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreprocessingDirectives", "W5 D5\PreprocessingDirectives\PreprocessingDirectives.csproj", "{0AA3960D-7152-4FEE-B125-3C1E18FBE395}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -375,11 +379,16 @@ Global
 		{09D51696-9994-41B5-9959-9DFD1B331B02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09D51696-9994-41B5-9959-9DFD1B331B02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09D51696-9994-41B5-9959-9DFD1B331B02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AA3960D-7152-4FEE-B125-3C1E18FBE395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AA3960D-7152-4FEE-B125-3C1E18FBE395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AA3960D-7152-4FEE-B125-3C1E18FBE395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AA3960D-7152-4FEE-B125-3C1E18FBE395}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{0AA3960D-7152-4FEE-B125-3C1E18FBE395} = {A966AD2E-80DB-49E0-8070-B6DFE0C1E36D}
 		{09D51696-9994-41B5-9959-9DFD1B331B02} = {5637E846-0989-4572-83A1-6CBC066E2D2D}
 		{CCE2C0C8-CD08-44DA-AD87-32848B8B64A7} = {FC559EAF-E754-4775-A039-64B804F331A8}
 		{C71461E0-7028-4153-94DC-75B522D07B10} = {FC559EAF-E754-4775-A039-64B804F331A8}
