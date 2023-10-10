@@ -1,0 +1,1 @@
+<Car xmlns="http://schemas.datacontract.org/2004/07/" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><Brand>Tesla</Brand><Year>3</Year><_carPassword>123456</_carPassword><tireSize>5</tireSize></Car>
