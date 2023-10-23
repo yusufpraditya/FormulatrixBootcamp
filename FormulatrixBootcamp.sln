@@ -165,6 +165,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataContractSerialization",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataContractJsonSerialization", "W6 D2\DataContractJsonSerialization\DataContractJsonSerialization.csproj", "{C649FA5B-2D7A-448B-8148-5AFC9EA821E4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "W8 D1", "W8 D1", "{1553EE85-EB84-49FF-97EE-0E0431ABD980}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework", "W8 D1\EntityFramework\EntityFramework.csproj", "{D65BC369-5452-4A87-8A12-49E1ABAB7F2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -423,11 +427,16 @@ Global
 		{C649FA5B-2D7A-448B-8148-5AFC9EA821E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C649FA5B-2D7A-448B-8148-5AFC9EA821E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C649FA5B-2D7A-448B-8148-5AFC9EA821E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D65BC369-5452-4A87-8A12-49E1ABAB7F2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D65BC369-5452-4A87-8A12-49E1ABAB7F2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D65BC369-5452-4A87-8A12-49E1ABAB7F2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D65BC369-5452-4A87-8A12-49E1ABAB7F2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{D65BC369-5452-4A87-8A12-49E1ABAB7F2A} = {1553EE85-EB84-49FF-97EE-0E0431ABD980}
 		{C649FA5B-2D7A-448B-8148-5AFC9EA821E4} = {AED24BE0-064B-4FAC-9168-1A5A8386EAAE}
 		{EDED0B55-D1A6-4710-8656-8DCC6606A66D} = {AED24BE0-064B-4FAC-9168-1A5A8386EAAE}
 		{865162EF-747B-46A5-8463-625FEC5E88C8} = {AED24BE0-064B-4FAC-9168-1A5A8386EAAE}
